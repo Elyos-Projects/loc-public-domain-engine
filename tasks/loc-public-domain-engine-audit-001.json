@@ -1,0 +1,38 @@
+{
+  "context": "The rights-gate precision metric is zero confirmed wrong-clears in every stratified audit. This task conducts the first independent audit of the M1 cleared corpus by an auditor who was not involved in the gate run that produced the clears. Any wrong-clear found requires a vocabulary/golden-test fix and a re-audit before sign-off. Depends on data-001. See PLAN.md (Success metrics, M1 exit criterion c).",
+  "urgent": false,
+  "id": "loc-public-domain-engine-audit-001",
+  "acceptanceCriteria": [
+    "The auditor is independent of the gate run that produced the M1 cleared set (no self-grading).",
+    "The sample is stratified by rights-statement category and source collection; minimum 200 cleared items or whole release if smaller.",
+    "Each sampled item's rights determination is independently re-reviewed against rights/vocabulary.yml.",
+    "Zero confirmed wrong-clears are found; if any wrong-clear is found, a vocabulary/golden-test fix is required and a re-audit completed before M1 exits.",
+    "The audit report documents: sample size, strata, methodology, auditor identity, findings, and sign-off.",
+    "The audit report is committed as a permanent record under rights/audit/."
+  ],
+  "resources": [
+    "https://rightsstatements.org/",
+    "https://www.loc.gov/legal/"
+  ],
+  "output": "A committed stratified rights audit report with zero confirmed wrong-clears, signed off by the independent auditor.",
+  "requestor": "jdev1977",
+  "priority": "high",
+  "title": "Stratified rights audit of the M1 corpus (zero confirmed wrong-clears)",
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "lane": "donated",
+  "type": "research",
+  "outputLicense": "CC0-1.0",
+  "verifiedNeed": false,
+  "objective": "Conduct an independent stratified rights audit of the M1 cleared corpus with a minimum sample of 200 items or the whole corpus if smaller, stratified by rights-statement category and source collection, verifying zero confirmed wrong-clears before M1 can exit.",
+  "status": "open",
+  "riskTier": "medium",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "project": "loc-public-domain-engine"
+}

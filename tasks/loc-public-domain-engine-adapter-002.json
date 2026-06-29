@@ -1,0 +1,37 @@
+{
+  "verifiedNeed": false,
+  "priority": "medium",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "lane": "donated",
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "id": "loc-public-domain-engine-adapter-002",
+  "outputLicense": "MIT",
+  "acceptanceCriteria": [
+    "The adapter targets a different downstream lane from adapter-001 (at minimum one of: public-domain-translations, civic-open-data, caption-commons).",
+    "Routing logic uses media type and/or detected language to direct items to the correct lane.",
+    "Rights basis, jurisdiction, attribution, and share-alike obligations are propagated without loss.",
+    "The adapter is idempotent and does not create duplicate downstream records.",
+    "An end-to-end test confirms the target downstream project receives correctly-attributed items.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "resources": [
+    "planning/projects/loc-public-domain-engine/PLAN.md"
+  ],
+  "status": "open",
+  "context": "M3 requires at least 2 downstream lanes consuming the fan-out feed, with at least 1 downstream project shipping artifacts to beneficiaries. The second adapter wires a different downstream lane, either public-domain-translations for non-English cleared texts, or a structured-dataset lane such as civic-open-data. Depends on adapter-001. See PLAN.md (M3 exit criterion a).",
+  "objective": "Build the second downstream adapter targeting a different lane from adapter-001 (e.g. translation lane for non-English items, or structured-dataset lane), routing cleared items by media type and detected language, propagating rights basis, jurisdiction, and attribution.",
+  "type": "code",
+  "urgent": false,
+  "project": "loc-public-domain-engine",
+  "requestor": "jdev1977",
+  "output": "A second downstream adapter (TypeScript) committed via PR, with end-to-end tests.",
+  "riskTier": "medium",
+  "title": "Wire a 2nd downstream lane (translation or dataset)"
+}

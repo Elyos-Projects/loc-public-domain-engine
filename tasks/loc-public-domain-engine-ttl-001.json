@@ -1,0 +1,37 @@
+{
+  "outputLicense": "MIT",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "requestor": "jdev1977",
+  "output": "A TTL re-verification job (TypeScript) committed via PR, with tests covering expiry detection, re-verification, and status-change pulling.",
+  "context": "LoC rights metadata can change after an item is cleared. Every manifest carries a determination TTL; items whose TTL has expired must be re-verified against current LoC metadata before re-publication. A changed rights status must pull the item from the cleared set and log it. Without this job, stale clears could be re-published violating current rights. Depends on prov-001. See PLAN.md (Risks row for stale clear, Sustainability).",
+  "project": "loc-public-domain-engine",
+  "priority": "medium",
+  "resources": [
+    "https://www.loc.gov/apis/"
+  ],
+  "deliverable": "pr",
+  "id": "loc-public-domain-engine-ttl-001",
+  "riskTier": "medium",
+  "urgent": false,
+  "lane": "donated",
+  "title": "Re-verification (determination TTL) job for stale clears",
+  "acceptanceCriteria": [
+    "The job reads manifests of all cleared items and identifies those whose TTL expiry has passed.",
+    "For each expired item, current LoC rights metadata is re-fetched using the polite client honoring all rate limits and cache.",
+    "The rights-gate is re-run; items still eligible get an updated manifest with a fresh TTL.",
+    "Items whose rights status has changed to ineligible or needs-review are pulled from the cleared set and recorded in the quarantine ledger with reason ttl-status-changed.",
+    "The job is idempotent: re-running does not double-process or duplicate records.",
+    "pnpm build and pnpm test and pnpm lint pass; a test with a simulated status-change verifies the pull logic."
+  ],
+  "status": "open",
+  "type": "code",
+  "objective": "Implement the TTL re-verification job that identifies cleared items with an expired determination TTL, re-fetches current LoC rights metadata via the polite client, re-runs the rights-gate, updates manifests for still-eligible items, and pulls items with a changed rights status from the cleared set with a log entry.",
+  "tokenEstimate": "small",
+  "verifiedNeed": false
+}

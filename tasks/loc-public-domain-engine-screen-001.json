@@ -1,0 +1,38 @@
+{
+  "status": "open",
+  "output": "A cultural-sensitivity and privacy screen specification document committed via PR, reviewed by the cultural/privacy reviewer.",
+  "id": "loc-public-domain-engine-screen-001",
+  "verifiedNeed": false,
+  "lane": "donated",
+  "acceptanceCriteria": [
+    "The spec defines three screen categories: (1) Indigenous/TK materials (TK Label indicators, community-provenance signals), (2) sensitive ethnographic or human-remains content (field/collection signals), (3) living-person personal data.",
+    "Detection signals and metadata fields to check for each category are enumerated.",
+    "The hold procedure is specified: flagged items are quarantined with a reason, not fanned out, pending reviewer sign-off.",
+    "The reviewer workflow is defined: who reviews, what sign-off looks like, and what happens if no reviewer is available (hold indefinitely).",
+    "The spec is reviewed by the cultural/privacy reviewer role before implementation.",
+    "The spec records that the screen is separate from the rights-gate and must run on every cleared item before fan-out."
+  ],
+  "objective": "Specify the cultural-sensitivity and privacy screen, including categories, detection signals, hold procedures, and reviewer workflow, so items carrying TK Labels, sensitive content, or living-person data are held for review rather than auto-fanned-out.",
+  "context": "Public-domain status does not mean ethically clear: LoC holds Indigenous materials with Traditional Knowledge Labels, sensitive ethnographic and human-remains content, and items that surface living-person personal data, all requiring a separate screen before fan-out. This screen is independent of the rights-gate. Without it, PD but ethically sensitive items could be fanned into downstream tasks without review. See PLAN.md (Solution approach section 4).",
+  "type": "design-spec",
+  "riskTier": "medium",
+  "resources": [
+    "https://localcontexts.org/labels/traditional-knowledge-labels/",
+    "https://www.loc.gov/collections/"
+  ],
+  "tokenEstimate": "small",
+  "priority": "high",
+  "project": "loc-public-domain-engine",
+  "title": "Cultural-sensitivity / privacy screen spec (TK Labels, sensitive, living-person)",
+  "requestor": "jdev1977",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "outputLicense": "CC0-1.0",
+  "deliverable": "document",
+  "urgent": false
+}

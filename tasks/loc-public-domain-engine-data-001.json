@@ -1,0 +1,38 @@
+{
+  "context": "M1 proves the rights-gate end-to-end on a real LoC source. This task runs one approved high-PD source (Chronicling America is the primary candidate) through the full pipeline: discovery, polite fetch, rights-gate, cultural-sensitivity screen, and provenance-manifest generation. Every item not cleared must be logged in the quarantine ledger. Depends on client-001 and ci-001. See PLAN.md (M1 exit criteria).",
+  "urgent": false,
+  "id": "loc-public-domain-engine-data-001",
+  "acceptanceCriteria": [
+    "One approved high-PD source (e.g. Chronicling America) is selected and documented with rationale for its approval.",
+    "The full pipeline (discovery, polite fetch, rights-gate, cultural-sensitivity screen, manifest) runs end-to-end without manual intervention.",
+    "100% of cleared items carry a complete frozen provenance manifest; items without one are excluded from the cleared set.",
+    "All access remained within loc-policy.yml limits; cache was used for re-fetches; zero policy breaches occurred.",
+    "Every ineligible and needs-review item is recorded in the quarantine ledger (ledger/quarantine.jsonl) with a reason code.",
+    "The cleared corpus passes the CI provenance-completeness gate and rights-gate golden tests."
+  ],
+  "resources": [
+    "https://chroniclingamerica.loc.gov/",
+    "https://www.loc.gov/apis/"
+  ],
+  "output": "A committed cleared corpus dataset with frozen manifests and a populated quarantine ledger, passing CI gates.",
+  "requestor": "jdev1977",
+  "priority": "high",
+  "title": "Run an approved high-PD source (e.g. Chronicling America) through the gate to produce cleared corpus + manifests",
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "lane": "donated",
+  "type": "data",
+  "outputLicense": "CC0-1.0",
+  "verifiedNeed": false,
+  "objective": "Run one approved high-PD LoC source end-to-end through the full pipeline, producing a cleared corpus where every item carries a complete frozen manifest and every non-cleared item is recorded in the quarantine ledger with a reason.",
+  "status": "open",
+  "riskTier": "medium",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "project": "loc-public-domain-engine"
+}

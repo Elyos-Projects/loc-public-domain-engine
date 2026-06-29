@@ -1,0 +1,38 @@
+{
+  "status": "open",
+  "output": "An outreach-status and reviewer-appointment document committed via PR, recording contacts, responses, and named reviewer/counsel.",
+  "id": "loc-public-domain-engine-partner-001",
+  "verifiedNeed": false,
+  "lane": "donated",
+  "acceptanceCriteria": [
+    "Outreach to LoC Labs is initiated and the status (response, no-response, or in-conversation) is documented honestly.",
+    "Outreach to the By the People / Concordia program is initiated to understand the contribution pathway.",
+    "A named qualified rights reviewer is identified and has accepted the role; their qualifications are documented.",
+    "Counsel or a qualified rights/IP attorney is engaged or identified for review of the rights/vocabulary.yml ruleset.",
+    "A fallback is documented: if the rights-reviewer seat is empty, no determination advances, no fan-out, escalate to Elyos governance/board.",
+    "The outreach status and reviewer/counsel names are recorded in a committed document."
+  ],
+  "objective": "Begin outreach to LoC Labs and By the People (Concordia); identify, vet, and secure a named qualified rights reviewer and counsel for the vocabulary ruleset to satisfy the hard M0 exit criterion; document the fallback if the seat remains empty.",
+  "context": "M0 cannot exit until a qualified rights reviewer and counsel for the vocabulary ruleset is named, which is a hard exit criterion, not a soft one. In parallel, outreach to LoC Labs and the By the People (Concordia) program should start early to establish API-etiquette guidance and explore collaboration. Without a named rights reviewer, no determination advances past needs-review and no item is fanned out. See PLAN.md (Governance section, M0 exit criteria f and g).",
+  "type": "research",
+  "riskTier": "low",
+  "resources": [
+    "https://labs.loc.gov/",
+    "https://crowd.loc.gov/"
+  ],
+  "tokenEstimate": "small",
+  "priority": "high",
+  "project": "loc-public-domain-engine",
+  "title": "LoC Labs / By the People outreach + name rights reviewer and counsel",
+  "requestor": "jdev1977",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "outputLicense": "CC0-1.0",
+  "deliverable": "document",
+  "urgent": false
+}

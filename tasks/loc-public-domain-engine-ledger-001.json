@@ -1,0 +1,36 @@
+{
+  "context": "Transparency about the gate's conservatism is a first-class requirement. Every item not cleared must be recorded with its reason, and aggregate counts by exclusion reason published so external observers can verify the gate is not a black box. Depends on data-001. See PLAN.md (Success metrics, Solution approach section 8).",
+  "urgent": false,
+  "id": "loc-public-domain-engine-ledger-001",
+  "acceptanceCriteria": [
+    "The quarantine ledger (ledger/quarantine.jsonl) contains a record for every item not cleared in the M1 run, each with a reason code.",
+    "An aggregate summary table is published alongside showing counts by exclusion reason (restricted, undetermined, needs-review, sensitive-hold).",
+    "The ledger is append-only and version-controlled so the history is auditable.",
+    "The ledger format is documented so external consumers can parse it.",
+    "The maintainer has reviewed the ledger before publication."
+  ],
+  "resources": [
+    "planning/projects/loc-public-domain-engine/PLAN.md"
+  ],
+  "output": "A committed quarantine ledger (ledger/quarantine.jsonl) and aggregate summary, reviewed and published.",
+  "requestor": "jdev1977",
+  "priority": "high",
+  "title": "Publish the quarantine ledger with reason counts",
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "lane": "donated",
+  "type": "data",
+  "outputLicense": "CC0-1.0",
+  "verifiedNeed": false,
+  "objective": "Publish the quarantine ledger (ledger/quarantine.jsonl) populated from the M1 data run, with per-item reason records and an aggregate reason-count summary, making the gate's conservatism publicly transparent.",
+  "status": "open",
+  "riskTier": "low",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "project": "loc-public-domain-engine"
+}

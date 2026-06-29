@@ -1,0 +1,40 @@
+{
+  "type": "code",
+  "tokenEstimate": "large",
+  "verifiedNeed": false,
+  "outputLicense": "MIT",
+  "title": "Polite LoC client: throttle, conditional requests + cache, backoff/jitter, circuit breaker, contact UA",
+  "status": "open",
+  "requestor": "jdev1977",
+  "acceptanceCriteria": [
+    "All LoC HTTP access routes through this single client; no direct fetch calls exist outside it.",
+    "A token-bucket throttle and single-flight concurrency cap enforce the limits in loc-policy.yml (read at runtime, not hardcoded).",
+    "Conditional requests send If-None-Match and If-Modified-Since headers; responses are cached with ETag/Last-Modified so re-fetches return 304 and avoid full transfers.",
+    "Exponential backoff with jitter is applied on 429 and 5xx responses, honoring Retry-After where present.",
+    "A circuit breaker auto-pauses and emits an alert on sustained errors; it never hammers a failing endpoint.",
+    "The descriptive contact User-Agent (project URL + email from loc-policy.yml) is sent on every request; no secrets appear in headers, logs, or receipts.",
+    "Unit tests cover: happy-path fetch, 304 cache hit, 429 retry-after, circuit-breaker trip, and concurrent-request cap.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "priority": "high",
+  "project": "loc-public-domain-engine",
+  "lane": "donated",
+  "deliverable": "pr",
+  "riskTier": "medium",
+  "urgent": false,
+  "resources": [
+    "https://www.loc.gov/apis/",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Conditional_requests"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "objective": "Implement the polite LoC client library (TypeScript, ESM, agent-neutral) that enforces loc-policy.yml rate limits via a token-bucket throttle and single-flight concurrency cap, uses conditional HTTP requests with caching (ETag/Last-Modified, 304s), applies exponential backoff with jitter on 429/5xx, trips a circuit breaker on sustained errors, and sends a descriptive contact User-Agent.",
+  "output": "A polite LoC client module (TypeScript) committed via PR, with unit tests and CI-green status.",
+  "context": "Bulk programmatic access to LoC is easy to abuse: a fan-out engine that crawls per-item can exceed LoC published rate limits, degrade a public service, and get the project blocked. Politeness is an engineering requirement and an ethical one. This task builds the single polite HTTP client that all LoC access routes through, enforcing the loc-policy.yml limits. Depends on policy-001. See PLAN.md (Solution approach section 2).",
+  "id": "loc-public-domain-engine-client-001"
+}

@@ -1,0 +1,38 @@
+{
+  "verifiedNeed": false,
+  "priority": "medium",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "lane": "donated",
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "id": "loc-public-domain-engine-data-002",
+  "outputLicense": "CC0-1.0",
+  "acceptanceCriteria": [
+    "At least 2 approved high-PD LoC sources are integrated and documented with rationale.",
+    "At least 5000 cleared items are emitted to the fan-out contract, each with a complete frozen provenance manifest.",
+    "100% of cleared items pass the CI provenance-completeness gate.",
+    "A fresh stratified independent rights audit (at least 200 sampled items, by rights category and source) shows zero confirmed wrong-clears.",
+    "All access remained within loc-policy.yml limits; zero policy breaches.",
+    "The quarantine ledger is updated with all non-cleared items from the new sources."
+  ],
+  "resources": [
+    "https://chroniclingamerica.loc.gov/",
+    "https://www.loc.gov/collections/"
+  ],
+  "status": "open",
+  "context": "M3 requires at least 5000 cleared items across at least 2 approved sources with 100% provenance and zero confirmed wrong-clears in a fresh audit. A second source beyond Chronicling America is identified and approved, both are run through the gate, and a fresh stratified audit is conducted. Depends on adapter-001 and rights-001. See PLAN.md (M3 exit criterion c, Success metrics).",
+  "objective": "Scale the cleared corpus to at least 5000 items by integrating at least 2 approved high-PD LoC sources, maintaining 100% provenance on every cleared item, and passing a fresh stratified independent rights audit with zero confirmed wrong-clears.",
+  "type": "data",
+  "urgent": false,
+  "project": "loc-public-domain-engine",
+  "requestor": "jdev1977",
+  "output": "An expanded cleared corpus with at least 5000 items and 100% provenance, plus a fresh rights audit report with zero confirmed wrong-clears.",
+  "riskTier": "medium",
+  "title": "Scale cleared corpus to at least 5000 items across at least 2 approved sources (100% provenance)"
+}

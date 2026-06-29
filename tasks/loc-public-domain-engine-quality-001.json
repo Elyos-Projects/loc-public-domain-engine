@@ -1,0 +1,36 @@
+{
+  "requestor": "jdev1977",
+  "title": "Automated anomaly flagging for the rights audit (assistive)",
+  "status": "open",
+  "urgent": false,
+  "riskTier": "low",
+  "priority": "low",
+  "context": "As the cleared corpus grows, an automated anomaly-flagging tool can assist auditors by surfacing items with unusual rights-field combinations or edge-case metadata patterns for prioritized human review. This is strictly assistive: it never auto-clears or auto-disqualifies items; all decisions remain human-confirmed. Unscheduled backlog; designed to complement, not replace, the stratified audit.",
+  "lane": "donated",
+  "type": "code",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "verifiedNeed": false,
+  "objective": "Build an automated anomaly-flagging tool that scans the cleared corpus for items with unusual rights-field combinations or edge-case patterns and surfaces them for prioritized human review during audits, without ever auto-clearing or auto-disqualifying any item.",
+  "deliverable": "pr",
+  "project": "loc-public-domain-engine",
+  "tokenEstimate": "medium",
+  "output": "An anomaly-flagging tool (TypeScript) committed via PR, with clear assistive-only labeling.",
+  "acceptanceCriteria": [
+    "The tool scans manifests and flags items with anomalous patterns (e.g. conflicting collection-level vs item-level rights, missing date on a pre-1929 determination, unusual rights-field combinations).",
+    "Flagged items are added to a prioritized review queue for the auditor; no item is auto-cleared or auto-disqualified by the tool.",
+    "The tool output clearly labels all flags as assistive, human-confirmed to prevent misuse.",
+    "False-positive rate is documented and monitored; the tool does not replace the stratified audit.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "resources": [
+    "https://rightsstatements.org/"
+  ],
+  "outputLicense": "MIT",
+  "id": "loc-public-domain-engine-quality-001"
+}

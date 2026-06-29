@@ -1,0 +1,36 @@
+{
+  "id": "loc-public-domain-engine-bythepeople-001",
+  "tokenEstimate": "medium",
+  "title": "Contribute corrected transcriptions back to By the People",
+  "urgent": false,
+  "output": "A dataset of corrected transcriptions submitted to By the People, plus a contribution-pathway document.",
+  "requestor": "jdev1977",
+  "status": "open",
+  "riskTier": "medium",
+  "resources": [
+    "https://crowd.loc.gov/"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "acceptanceCriteria": [
+    "A program agreement or contribution pathway with By the People / Concordia is confirmed before any data is submitted.",
+    "Only transcriptions derived from cleared items with complete provenance are submitted.",
+    "The submission aligns with and does not duplicate existing By the People work on the same items.",
+    "Attribution and provenance are carried through the contribution.",
+    "The contribution pathway and outcome are documented."
+  ],
+  "lane": "donated",
+  "deliverable": "dataset",
+  "project": "loc-public-domain-engine",
+  "outputLicense": "CC0-1.0",
+  "context": "LoC's By the People (Concordia) crowd-transcription program accepts volunteer contributions of corrected transcriptions. The engine's cleared corpus overlaps with Concordia source material; contributing back aligns the projects and benefits the LoC community without duplicating or competing with By the People. Requires a program agreement. Unscheduled backlog; needs By the People program agreement first.",
+  "priority": "low",
+  "objective": "Identify corrected transcriptions derived from the cleared corpus eligible for contribution to By the People (Concordia), confirm program agreement and contribution format requirements, and submit a first batch via the approved contribution pathway.",
+  "type": "data",
+  "verifiedNeed": false
+}

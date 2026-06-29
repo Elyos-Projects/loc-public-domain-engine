@@ -1,0 +1,39 @@
+{
+  "lane": "donated",
+  "requestor": "jdev1977",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "title": "Capture LoC published rate limits + bulk/sitemap offerings into loc-policy.yml",
+  "status": "open",
+  "type": "research",
+  "outputLicense": "CC0-1.0",
+  "urgent": false,
+  "riskTier": "medium",
+  "context": "The polite-API-protocol requires configurable rate limits grounded in LoC's own published policy, not hardcoded constants, because LoC can change them. Before the polite client can be built, this task verifies and records LoC's currently published per-endpoint limits and catalogues all available bulk-data and sitemap offerings. Bulk access is always preferred over per-item crawling to reduce load. See PLAN.md (Solution approach sections 1 and 2).",
+  "output": "A reviewed loc-policy.yml committed via PR, recording LoC published rate limits, bulk/sitemap catalogue, and the contact User-Agent definition.",
+  "id": "loc-public-domain-engine-policy-001",
+  "resources": [
+    "https://www.loc.gov/apis/",
+    "https://chroniclingamerica.loc.gov/",
+    "https://www.loc.gov/sitemap.xml",
+    "https://www.loc.gov/robots.txt"
+  ],
+  "project": "loc-public-domain-engine",
+  "priority": "high",
+  "objective": "Produce a dated, source-cited loc-policy.yml that records LoC's currently published per-endpoint rate limits, all available bulk-data/sitemap offerings (marked preferred), and the required contact User-Agent string.",
+  "deliverable": "document",
+  "verifiedNeed": false,
+  "tokenEstimate": "small",
+  "acceptanceCriteria": [
+    "loc-policy.yml records LoC currently published per-endpoint rate limits, each entry verified and dated with the source URL.",
+    "All available LoC bulk data packages, item sitemaps, and collection manifests are catalogued and marked as preferred over per-item crawling.",
+    "The required contact User-Agent string (project URL + maintainer email) is defined in the policy file.",
+    "The file is YAML, human-readable, version-controlled, and treated as data so updates are a one-file change.",
+    "The politeness/infra owner has reviewed and signed off the recorded limits before the client is built."
+  ]
+}

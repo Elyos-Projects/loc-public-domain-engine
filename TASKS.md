@@ -242,3 +242,40 @@ Schema-valid Task JSON for the first M0 task (`loc-public-domain-engine-rights-0
   "outputLicense": "CC0-1.0"
 }
 ```
+
+---
+
+## Generated task index
+
+All backlog rows above have been decomposed into schema-valid `tasks/<id>.json` files.
+Generated: 2026-06-29. Validator: `validate-tasks.mjs`. Result: **27/27 PASS**.
+
+| File | Milestone | Type | Lane | Priority |
+| --- | --- | --- | --- | --- |
+| tasks/loc-public-domain-engine-rights-001.json | M0 | design-spec | donated | high |
+| tasks/loc-public-domain-engine-policy-001.json | M0 | research | donated | high |
+| tasks/loc-public-domain-engine-client-001.json | M0 | code | donated | high |
+| tasks/loc-public-domain-engine-prov-001.json | M0 | design-spec | donated | high |
+| tasks/loc-public-domain-engine-screen-001.json | M0 | design-spec | donated | high |
+| tasks/loc-public-domain-engine-ci-001.json | M0 | code | donated | high |
+| tasks/loc-public-domain-engine-partner-001.json | M0 | research | donated | high |
+| tasks/loc-public-domain-engine-data-001.json | M1 | data | donated | high |
+| tasks/loc-public-domain-engine-audit-001.json | M1 | research | donated | high |
+| tasks/loc-public-domain-engine-ledger-001.json | M1 | data | donated | high |
+| tasks/loc-public-domain-engine-screen-002.json | M1 | research | donated | high |
+| tasks/loc-public-domain-engine-partner-002.json | M1 | research | donated | high |
+| tasks/loc-public-domain-engine-contract-001.json | M2 | design-spec | donated | medium |
+| tasks/loc-public-domain-engine-adapter-001.json | M2 | code | donated | medium |
+| tasks/loc-public-domain-engine-ttl-001.json | M2 | code | donated | medium |
+| tasks/loc-public-domain-engine-docs-001.json | M2 | writing | donated | medium |
+| tasks/loc-public-domain-engine-adapter-002.json | M3 | code | donated | medium |
+| tasks/loc-public-domain-engine-data-002.json | M3 | data | donated | medium |
+| tasks/loc-public-domain-engine-partner-003.json | M3 | research | donated | medium |
+| tasks/loc-public-domain-engine-sustain-001.json | M3 | writing | donated | medium |
+| tasks/loc-public-domain-engine-adapter-003.json | Backlog | code | donated | low |
+| tasks/loc-public-domain-engine-bythepeople-001.json | Backlog | data | donated | low |
+| tasks/loc-public-domain-engine-iiif-001.json | Backlog | code | donated | low |
+| tasks/loc-public-domain-engine-lang-001.json | Backlog | code | donated | low |
+| tasks/loc-public-domain-engine-runner-001.json | Backlog | code | funded | low |
+| tasks/loc-public-domain-engine-quality-001.json | Backlog | code | donated | low |
+| tasks/loc-public-domain-engine-dashboard-001.json | Backlog | code | donated | low |
