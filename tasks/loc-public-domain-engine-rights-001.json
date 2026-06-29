@@ -1,0 +1,35 @@
+{
+  "id": "loc-public-domain-engine-rights-001",
+  "title": "Rights-vocabulary mapping + eligibility allow-list (deny-by-default)",
+  "project": "loc-public-domain-engine",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["open-culture", "public-data", "digital-libraries", "public-domain", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The LoC public-domain engine fans cleared items into downstream good-deed tasks, but the Library of Congress explicitly does not make rights determinations for users -- the legal assessment is the reuser's responsibility. So the rights-gate is the product, and it must be conservative: deny by default. This task defines the mapping from LoC / rightsstatements.org / Creative Commons rights values to an eligibility decision, before any item is fetched at scale or fanned out. See PLAN.md (Data, licensing & compliance).",
+  "objective": "Define rights/vocabulary.yml mapping each rights value to eligible | ineligible | needs-review with a recorded rationale and jurisdiction, such that only an affirmative public-domain/open determination (recognized rights statement, CC0/open CC, or unambiguous pre-1929-by-date) fans out, and everything ambiguous is quarantined.",
+  "acceptanceCriteria": [
+    "Every LoC / rightsstatements.org / Creative Commons rights value used is mapped to eligible | ineligible | needs-review with a written rationale.",
+    "Deny by default: any value not affirmatively listed as eligible resolves to ineligible; borderline values resolve to needs-review for human adjudication.",
+    "Pre-1929-by-date eligibility is allowed only with an affirmative, unambiguous publication date in the item's own metadata; date inference to fill a gap is explicitly forbidden.",
+    "Each determination records its jurisdiction (default U.S.) and the rule that produced it.",
+    "The ruleset is reviewed and signed off by counsel / a qualified rights reviewer before any use.",
+    "A golden-test corpus of known items per category (including negative cases that must be quarantined) is enumerated for CI."
+  ],
+  "resources": [
+    "planning/projects/loc-public-domain-engine/PLAN.md",
+    "https://www.loc.gov/legal/",
+    "https://rightsstatements.org/",
+    "https://creativecommons.org/licenses/",
+    "https://www.loc.gov/apis/"
+  ],
+  "output": "A counsel-reviewed rights/vocabulary.yml mapping plus a human-readable rights-determination policy document and an enumerated golden-test corpus, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}
