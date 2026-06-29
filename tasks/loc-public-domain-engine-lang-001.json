@@ -1,0 +1,36 @@
+{
+  "id": "loc-public-domain-engine-lang-001",
+  "tokenEstimate": "small",
+  "title": "Language detection + routing for non-English items",
+  "urgent": false,
+  "output": "Language detection + routing module (TypeScript) committed via PR.",
+  "requestor": "jdev1977",
+  "status": "open",
+  "riskTier": "low",
+  "resources": [
+    "https://www.loc.gov/apis/"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "acceptanceCriteria": [
+    "Language detection runs on every cleared item using LoC metadata language fields.",
+    "Detected language(s) are recorded in the cleared-item contract's language field.",
+    "Non-English items receive a routing hint pointing to the translation downstream lane.",
+    "Language detection does not block the pipeline for items with no language metadata (defaults to unknown, not an error).",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "lane": "donated",
+  "deliverable": "pr",
+  "project": "loc-public-domain-engine",
+  "outputLicense": "MIT",
+  "context": "The fan-out contract records detected language(s) and suggests downstream lanes. Non-English cleared items should route to the translation lane (public-domain-translations). This task adds language detection to the pipeline and wires the routing hint into the cleared-item contract. Unscheduled backlog; small addition that enables the translation lane to receive correctly-routed items.",
+  "priority": "low",
+  "objective": "Add a language-detection step to the pipeline that identifies the primary language(s) of each cleared item from its metadata, records them in the cleared-item contract, and sets a routing hint to the translation lane for non-English items.",
+  "type": "code",
+  "verifiedNeed": false
+}

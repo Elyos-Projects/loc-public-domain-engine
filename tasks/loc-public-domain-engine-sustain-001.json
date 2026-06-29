@@ -1,0 +1,37 @@
+{
+  "verifiedNeed": false,
+  "priority": "medium",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "lane": "donated",
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "id": "loc-public-domain-engine-sustain-001",
+  "outputLicense": "CC0-1.0",
+  "acceptanceCriteria": [
+    "The plan defines a versioned review schedule for rights/vocabulary.yml (at minimum annually, timed to the U.S. PD rolling date) and loc-policy.yml.",
+    "Reviewer rotation is specified: roles, SLA, and how a vacated seat triggers a hold until a replacement is named.",
+    "A throughput ceiling is defined: when the review backlog exceeds a threshold, new intake is throttled and the condition is reported.",
+    "A quarterly outcome report template is included covering all key metrics (cleared-item count, provenance completeness, wrong-clear count, quarantine breakdown, cache hit-rate, downstream lanes, artifacts delivered).",
+    "Procedures for loss of steward or reviewer are documented including the hold/escalation path.",
+    "The plan is reviewed and approved by the maintainer."
+  ],
+  "resources": [
+    "planning/projects/loc-public-domain-engine/PLAN.md"
+  ],
+  "status": "open",
+  "context": "After delivery the engine must not drift: rights-vocabulary and loc-policy.yml require periodic versioned review (LoC policy changes; U.S. PD rolling date changes annually). The reviewer pool must rotate to prevent bottlenecks, and a throughput ceiling must throttle intake when the review backlog grows. Without a sustainability plan, quality gates silently degrade. Depends on partner-003. See PLAN.md (Sustainability and maintenance).",
+  "objective": "Write the sustainability and maintenance plan covering: versioned vocabulary/policy review schedule, reviewer rotation with response-time SLA, throughput ceiling that throttles intake when the review backlog grows, quarterly outcome reporting, and procedures for loss of steward or reviewer.",
+  "type": "writing",
+  "urgent": false,
+  "project": "loc-public-domain-engine",
+  "requestor": "jdev1977",
+  "output": "A sustainability and maintenance plan document committed via PR, reviewed by the maintainer.",
+  "riskTier": "low",
+  "title": "Sustainability: versioned vocab/policy review, reviewer rotation, throughput ceiling"
+}

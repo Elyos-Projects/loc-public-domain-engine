@@ -1,0 +1,37 @@
+{
+  "context": "Per Elyos delivered means not merged: success is outcomes delivered to real beneficiaries. Without a committed downstream consumer, the engine has no last-mile delivery. Internal Elyos projects (a11y-alttext-commons, public-domain-translations) are immediate committed adopters; an external steward is the goal. Depends on partner-001. See PLAN.md (Problem and beneficiaries, M1 exit criterion g).",
+  "urgent": false,
+  "id": "loc-public-domain-engine-partner-002",
+  "acceptanceCriteria": [
+    "At least one candidate downstream consumer or external steward is identified and contacted.",
+    "Engagement status is recorded honestly (response/no-response/in-conversation/committed).",
+    "Internal Elyos consumer projects (a11y-alttext-commons, public-domain-translations, or similar) are formally confirmed as committed immediate adopters.",
+    "The outreach and commitment document is committed as a permanent record.",
+    "The document records what a committed steward would need to adopt and sustain the feed."
+  ],
+  "resources": [
+    "https://labs.loc.gov/",
+    "https://wikisource.org/"
+  ],
+  "output": "A committed partner-engagement document recording candidate stewards contacted and internal consumer commitments secured.",
+  "requestor": "jdev1977",
+  "priority": "high",
+  "title": "Identify and engage at least one candidate downstream consumer/steward",
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "lane": "donated",
+  "type": "research",
+  "outputLicense": "CC0-1.0",
+  "verifiedNeed": false,
+  "objective": "Identify and initiate engagement with at least one candidate downstream consumer or external steward; confirm internal Elyos consumers as committed adopters of the feed; document engagement status honestly.",
+  "status": "open",
+  "riskTier": "low",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "project": "loc-public-domain-engine"
+}

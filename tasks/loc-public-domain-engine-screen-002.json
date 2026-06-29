@@ -1,0 +1,37 @@
+{
+  "context": "Even after rights clearing, items may carry TK Labels, sensitive ethnographic content, or living-person personal data. The cultural-sensitivity screen specified in screen-001 must run over every cleared item before fan-out. Flagged items are held for review and not fanned. Depends on data-001 and screen-001. See PLAN.md (M1 exit criterion e).",
+  "urgent": false,
+  "id": "loc-public-domain-engine-screen-002",
+  "acceptanceCriteria": [
+    "Every item in the M1 cleared corpus is passed through the screen defined in screen-001.",
+    "Items triggering TK-label, sensitive-ethnographic, or living-person signals are flagged and held in a separate queue, not fanned out.",
+    "Each held item's flag reason is recorded.",
+    "The screen-completion report documents: total items screened, number flagged per category, and disposition of flagged items.",
+    "The screen is run by or reviewed by a person with appropriate cultural/privacy competence.",
+    "No flagged item is fanned out without explicit reviewer sign-off."
+  ],
+  "resources": [
+    "https://localcontexts.org/labels/traditional-knowledge-labels/"
+  ],
+  "output": "A committed cultural-sensitivity screen-completion report for the M1 corpus, with flagged items held.",
+  "requestor": "jdev1977",
+  "priority": "high",
+  "title": "Run cultural-sensitivity / privacy screen over the corpus; hold flagged items",
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "lane": "donated",
+  "type": "research",
+  "outputLicense": "CC0-1.0",
+  "verifiedNeed": false,
+  "objective": "Run the cultural-sensitivity and privacy screen (per screen-001 spec) over all items in the M1 cleared corpus, flag items carrying TK Labels, sensitive content, or living-person data, hold them for reviewer sign-off, and produce a screen-completion report.",
+  "status": "open",
+  "riskTier": "medium",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "project": "loc-public-domain-engine"
+}

@@ -1,0 +1,39 @@
+{
+  "requestor": "jdev1977",
+  "type": "code",
+  "status": "open",
+  "objective": "Implement a funded-lane OCR pipeline (via packages/runner with a hard fundedBudgetUsd cap) for cleared machine-print PD books, producing machine-readable text for downstream transcription and translation lanes, while never exceeding the task budget cap.",
+  "urgent": false,
+  "riskTier": "medium",
+  "priority": "low",
+  "context": "Some cleared PD books in LoC's collection would benefit from a high-quality OCR pass to produce machine-readable text for translation and structured data work. This is a funded-lane task running via packages/runner against donor funds, with a hard per-task budget cap that must never be exceeded. The donated lane never runs headless. Unscheduled backlog; the hard fundedBudgetUsd cap is an Elyos requirement for funded-lane tasks.",
+  "lane": "funded",
+  "resources": [
+    "https://www.loc.gov/collections/"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "verifiedNeed": false,
+  "fundedBudgetUsd": 50.0,
+  "deliverable": "pr",
+  "project": "loc-public-domain-engine",
+  "tokenEstimate": "large",
+  "output": "A funded-lane OCR pipeline (TypeScript, packages/runner) committed via PR, with budget enforcement and cost ledger.",
+  "acceptanceCriteria": [
+    "The pipeline runs only via packages/runner and enforces the fundedBudgetUsd cap; it halts and logs if the cap is approached.",
+    "Input is restricted to items that have cleared the rights-gate with a complete provenance manifest.",
+    "OCR output is committed with its source item reference and provenance pointer.",
+    "No secrets, tokens, or API keys appear in logs, receipts, or committed files.",
+    "The pipeline never runs headless in the donated lane; funded-lane execution only.",
+    "A cost ledger entry is produced for each run recording actual spend vs cap.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "title": "Funded-lane OCR pass for machine-print PD books (budget-capped)",
+  "outputLicense": "MIT",
+  "id": "loc-public-domain-engine-runner-001"
+}

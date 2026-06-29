@@ -1,0 +1,36 @@
+{
+  "id": "loc-public-domain-engine-adapter-003",
+  "tokenEstimate": "medium",
+  "title": "Adapter to caption-commons for cleared AV items",
+  "urgent": false,
+  "output": "An AV adapter module (TypeScript) committed via PR targeting caption-commons.",
+  "requestor": "jdev1977",
+  "status": "open",
+  "riskTier": "medium",
+  "resources": [
+    "https://www.loc.gov/collections/"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "acceptanceCriteria": [
+    "The adapter filters cleared items by AV media type (audio/video) and routes them to caption-commons.",
+    "Rights basis, jurisdiction, attribution, and share-alike obligations are propagated into the caption-commons intake.",
+    "The adapter is idempotent (dedup-keyed by item ID + content hash).",
+    "An end-to-end test confirms caption-commons receives correctly-attributed AV items.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "lane": "donated",
+  "deliverable": "pr",
+  "project": "loc-public-domain-engine",
+  "outputLicense": "MIT",
+  "context": "The caption-commons project produces captions and transcripts for audio-visual content. This adapter routes cleared AV items from the fan-out feed into caption-commons, enabling blind and deaf beneficiaries to access LoC's AV archive. AV transcript/caption work requires its own domain review in the caption-commons project. Unscheduled backlog; depends on adapter-001 being established.",
+  "priority": "low",
+  "objective": "Build the adapter that routes cleared AV items from the fan-out contract to caption-commons, filtering by AV media type, propagating rights basis, jurisdiction, and attribution, and satisfying caption-commons intake requirements.",
+  "type": "code",
+  "verifiedNeed": false
+}

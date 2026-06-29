@@ -1,0 +1,39 @@
+{
+  "outputLicense": "CC0-1.0",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "requestor": "jdev1977",
+  "output": "A committed JSON-LD contract definition, JSON Schema, and consumer-guide document, approved by the maintainer.",
+  "context": "The fan-out contract is the typed interface between the rights-gate and downstream Elyos projects. It must be JSON-LD so the wider commons can ingest it, idempotent so re-runs never spawn duplicate downstream tasks, and must propagate attribution, jurisdiction, and license-basis. Depends on prov-001. See PLAN.md (Solution approach section 6).",
+  "project": "loc-public-domain-engine",
+  "priority": "medium",
+  "resources": [
+    "https://schema.org/",
+    "https://www.dublincore.org/",
+    "https://iiif.io/"
+  ],
+  "deliverable": "document",
+  "id": "loc-public-domain-engine-contract-001",
+  "riskTier": "low",
+  "urgent": false,
+  "lane": "donated",
+  "title": "Define + validate the cleared item JSON-LD fan-out contract (idempotent/dedup-keyed)",
+  "acceptanceCriteria": [
+    "The contract is JSON-LD with vocabulary alignment to schema.org, Dublin Core, and IIIF where applicable.",
+    "Required fields include: item reference (LoC URL + item ID), media type(s), detected language(s), suggested downstream lane(s), provenance-manifest pointer, rights basis, jurisdiction, determination TTL expiry, and required courtesy attribution line.",
+    "The contract validates against a published JSON Schema committed to the repository.",
+    "Idempotency is guaranteed: keyed by LoC item ID + content hash so a re-run never emits a duplicate record.",
+    "CC-BY-SA share-alike obligations are recorded in the contract and carried into downstream intake.",
+    "The contract format is documented with a consumer guide explaining how to parse and use each field."
+  ],
+  "status": "open",
+  "type": "design-spec",
+  "objective": "Define and publish the cleared item JSON-LD fan-out contract aligned to schema.org/Dublin Core/IIIF, validated against a JSON Schema, idempotent and dedup-keyed by LoC item ID + content hash, carrying rights basis, jurisdiction, courtesy attribution, and suggested downstream lanes.",
+  "tokenEstimate": "medium",
+  "verifiedNeed": false
+}

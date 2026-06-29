@@ -1,0 +1,38 @@
+{
+  "status": "open",
+  "output": "CI gate code (provenance linter + golden-test corpus harness) committed via PR, with CI green.",
+  "id": "loc-public-domain-engine-ci-001",
+  "verifiedNeed": false,
+  "lane": "donated",
+  "acceptanceCriteria": [
+    "The provenance-completeness linter runs in CI and fails the build if any cleared item is missing any required manifest field.",
+    "The rights-gate golden-test corpus contains at least one example per rights category (eligible, ineligible, needs-review) drawn from known LoC items.",
+    "Negative cases are included; a wrongly-cleared negative case fails the build.",
+    "The golden-test corpus is committed under rights/audit/ and is human-auditable.",
+    "CI rejects any item whose rights value is not resolved by the approved vocabulary.",
+    "pnpm build and pnpm test and pnpm lint pass with the new gates active."
+  ],
+  "objective": "Implement two CI gates: (1) a provenance-completeness linter that fails the build if any cleared item lacks a complete manifest; (2) a rights-gate golden-test corpus harness asserting known items produce the correct determination, including negative cases that must be quarantined.",
+  "context": "The rights-gate and provenance-manifest must not silently regress. Two CI gates enforce this: a provenance-completeness linter that fails any build containing a cleared item without a complete manifest, and a golden-test corpus that runs known items through the rights-gate including negative cases in CI. Depends on rights-001 and prov-001. See PLAN.md (Tech stack, M0 exit).",
+  "type": "code",
+  "riskTier": "low",
+  "resources": [
+    "https://rightsstatements.org/",
+    "https://www.loc.gov/apis/"
+  ],
+  "tokenEstimate": "medium",
+  "priority": "high",
+  "project": "loc-public-domain-engine",
+  "title": "CI gates: provenance-completeness linter + rights-gate golden-test corpus",
+  "requestor": "jdev1977",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "outputLicense": "MIT",
+  "deliverable": "pr",
+  "urgent": false
+}

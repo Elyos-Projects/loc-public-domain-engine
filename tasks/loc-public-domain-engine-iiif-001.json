@@ -1,0 +1,37 @@
+{
+  "id": "loc-public-domain-engine-iiif-001",
+  "tokenEstimate": "medium",
+  "title": "IIIF manifest alignment for image-heavy collections",
+  "urgent": false,
+  "output": "IIIF manifest alignment module (TypeScript) committed via PR, with valid Presentation API v3 output.",
+  "requestor": "jdev1977",
+  "status": "open",
+  "riskTier": "low",
+  "resources": [
+    "https://iiif.io/",
+    "https://www.loc.gov/apis/"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "acceptanceCriteria": [
+    "The cleared-item contract for image items includes a IIIF manifest reference where LoC provides one.",
+    "A IIIF manifest generation or alignment layer is implemented for collections without a native IIIF manifest.",
+    "The IIIF manifest includes required courtesy attribution and rights metadata.",
+    "Integration tests confirm the manifests are valid IIIF Presentation API v3.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "lane": "donated",
+  "deliverable": "pr",
+  "project": "loc-public-domain-engine",
+  "outputLicense": "MIT",
+  "context": "IIIF (International Image Interoperability Framework) is the standard protocol for sharing images across digital-library platforms. Aligning cleared-item records with IIIF manifests improves commons interoperability so Wikimedia Commons, Internet Archive, and library platforms can ingest them directly. Unscheduled backlog; improves downstream ingestion for image-heavy LoC collections.",
+  "priority": "low",
+  "objective": "Add IIIF manifest alignment to the cleared-item fan-out contract for image-heavy collections, enabling downstream commons and library platforms to ingest cleared items via standard IIIF viewers and aggregators.",
+  "type": "code",
+  "verifiedNeed": false
+}

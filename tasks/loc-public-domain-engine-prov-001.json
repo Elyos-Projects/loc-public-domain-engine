@@ -1,0 +1,37 @@
+{
+  "type": "design-spec",
+  "tokenEstimate": "small",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0",
+  "title": "Provenance-manifest format (snapshot + rule + hash + TTL + jurisdiction)",
+  "status": "open",
+  "requestor": "jdev1977",
+  "acceptanceCriteria": [
+    "A JSON Schema for the manifest format is defined with all required fields: item URL, raw API snapshot, rights field value, determination, rule ID, retrieval timestamp (ISO 8601), content hash (algorithm + hex), determination TTL, and jurisdiction.",
+    "The format is documented in a human-readable spec explaining what each field contains and why.",
+    "The TTL field is defined with a proposed default of 180 days and the rationale recorded.",
+    "The manifest is frozen: it records what was true at clear-time and does not reference live LoC metadata.",
+    "The maintainer has reviewed and approved the format before any data tasks use it."
+  ],
+  "priority": "high",
+  "project": "loc-public-domain-engine",
+  "lane": "donated",
+  "deliverable": "document",
+  "riskTier": "low",
+  "urgent": false,
+  "resources": [
+    "https://www.loc.gov/apis/",
+    "https://schema.org/"
+  ],
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "objective": "Define the provenance-manifest format (JSON Schema plus human-readable spec) recording: the raw LoC API response snapshot, the resolved rights determination, the rule that produced it, the LoC item URL, a retrieval timestamp, a content hash, a determination TTL, and the jurisdiction.",
+  "output": "A committed provenance-manifest JSON Schema plus a human-readable format spec, approved by the maintainer.",
+  "context": "Every cleared item must carry a frozen provenance manifest so that every rights clear is reproducible and auditable even if LoC live metadata later changes. The manifest records what the metadata said at clear-time, which rule cleared it, and when the determination expires (TTL). Without it, the rights audit cannot function. Depends on rights-001. See PLAN.md (Solution approach section 5, Key data artifacts).",
+  "id": "loc-public-domain-engine-prov-001"
+}

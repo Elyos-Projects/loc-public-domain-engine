@@ -1,0 +1,39 @@
+{
+  "outputLicense": "CC0-1.0",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "requestor": "jdev1977",
+  "output": "A consumer guide document committed via PR.",
+  "context": "Downstream Elyos projects and external commons need a clear guide to consuming the fan-out contract: how to parse it, required attribution, what jurisdiction means for their use case, license basis, and share-alike obligations. Without this, downstream consumers may misuse cleared items. Depends on contract-001. See PLAN.md (M2 exit, Governance).",
+  "project": "loc-public-domain-engine",
+  "priority": "medium",
+  "resources": [
+    "https://www.loc.gov/legal/",
+    "https://creativecommons.org/licenses/"
+  ],
+  "deliverable": "document",
+  "id": "loc-public-domain-engine-docs-001",
+  "riskTier": "low",
+  "urgent": false,
+  "lane": "donated",
+  "title": "Consumer guide: contract, attribution, jurisdiction, license-basis",
+  "acceptanceCriteria": [
+    "The guide explains how to parse and validate the JSON-LD cleared-item contract.",
+    "Required courtesy attribution to the Library of Congress is documented with an example.",
+    "Jurisdiction scope is explained: PD in the U.S. does not mean worldwide; downstream reusers in other jurisdictions are explicitly warned to re-verify locally.",
+    "License basis is documented per rights category (CC0, CC-BY, CC-BY-SA, no-known-restrictions, pre-1929 PD).",
+    "CC-BY-SA share-alike obligations are explained with an example of propagation into derivative works.",
+    "The determination TTL field and re-verification before expiry are described.",
+    "The guide is clear enough for a downstream project to onboard without asking questions."
+  ],
+  "status": "open",
+  "type": "writing",
+  "objective": "Write the consumer guide for the cleared-item fan-out contract, covering: parsing and validation, required courtesy attribution, jurisdiction scope and warnings, license basis per rights category, CC-BY-SA share-alike propagation, and re-verification before TTL expiry.",
+  "tokenEstimate": "small",
+  "verifiedNeed": false
+}

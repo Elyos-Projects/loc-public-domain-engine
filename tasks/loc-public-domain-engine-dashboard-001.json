@@ -1,0 +1,36 @@
+{
+  "requestor": "jdev1977",
+  "title": "Public metrics dashboard (clears, quarantine reasons, cache hit-rate)",
+  "status": "open",
+  "urgent": false,
+  "riskTier": "low",
+  "priority": "low",
+  "context": "The project commits to transparency: cleared-item count, quarantine reasons, cache hit-rate, policy-compliance, and downstream-delivery metrics must be publicly visible. A lightweight dashboard surfaces these metrics so external observers can verify the gate's conservatism and the engine's politeness. Unscheduled backlog; a small transparency surface for public accountability.",
+  "lane": "donated",
+  "type": "code",
+  "domain": [
+    "open-culture",
+    "public-data",
+    "digital-libraries",
+    "public-domain",
+    "accessibility"
+  ],
+  "verifiedNeed": false,
+  "objective": "Build a public metrics dashboard (static site or embedded report) displaying key engine metrics including cleared-item count, provenance completeness, quarantine-reason breakdown, cache hit-rate, policy-compliance status, downstream lanes wired, and downstream artifacts delivered, refreshed on each pipeline run.",
+  "deliverable": "pr",
+  "project": "loc-public-domain-engine",
+  "tokenEstimate": "small",
+  "output": "A public metrics dashboard (static site or embedded report) committed via PR, refreshed by the pipeline.",
+  "acceptanceCriteria": [
+    "The dashboard displays: cleared-item count, provenance completeness (%), quarantine reasons by count, cache hit-rate, zero-policy-breach status, downstream lanes count, and downstream artifacts delivered.",
+    "Metrics are refreshed automatically on each pipeline run.",
+    "The dashboard is publicly accessible without authentication.",
+    "Data backing the dashboard is derived from committed artifacts (ledger, manifests), not ephemeral runtime state.",
+    "pnpm build and pnpm test and pnpm lint pass."
+  ],
+  "resources": [
+    "planning/projects/loc-public-domain-engine/PLAN.md"
+  ],
+  "outputLicense": "MIT",
+  "id": "loc-public-domain-engine-dashboard-001"
+}
